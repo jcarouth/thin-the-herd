@@ -32,4 +32,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /**
+     * Get WeighIns for this User
+     *
+     * @return
+     */
+    public function weighIns()
+    {
+        return $this->hasMany(\App\WeighIn::class);
+    }
 }

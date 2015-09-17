@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('dashboard', 'DashboardController@index');
 
+Route::get('weigh-ins', 'WeighInController@index');
+Route::get('weigh-ins/create', 'WeighInController@create');
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
